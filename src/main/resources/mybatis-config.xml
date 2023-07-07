@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<!--MyBatis配置-->
+<configuration>
+<!--    因为有了spring，所以mybatis配置文件可以不写了，这里写的是数据库配置-->
+</configuration>

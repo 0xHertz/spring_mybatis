@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation=
+               "http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+               http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+               http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+    <!-- 对于一个xml文件如果作为框架的配置文件，需要遵守框架的配置规则 -->
+    <!-- 通常一个框架为了让开发者能够正确的配置，都会提供xml的规范文件（dtd\xsd） -->
+    <context:annotation-config/>
+    <context:component-scan base-package="com.kechen.myspring"/>
+<!--    基于注解的aop实现-->
+    <aop:aspectj-autoproxy></aop:aspectj-autoproxy>
+</beans>

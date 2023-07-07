@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace = 所需实现的接口全限定名-->
+<mapper namespace="com.kechen.dao.Userdao">
+    <resultMap id="userResultMap" type="com.kechen.myspring.User">
+        <id property="id" column="id"/>
+        <result property="name" column="name" />
+        <result property="sex" column="sex" />
+        <result property="brithday" column="birthday" />
+    </resultMap>
+    <select id="selectUsers" resultMap="userResultMap">
+        SELECT * FROM t_user
+    </select>
+    <select id="selectUserById" resultType="com.kechen.myspring.User">
+        SELECT * FROM t_user WHERE id=#{id}
+    </select>
+</mapper>

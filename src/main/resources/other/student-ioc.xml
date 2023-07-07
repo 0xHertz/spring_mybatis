@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!-- 对于一个xml文件如果作为框架的配置文件，需要遵守框架的配置规则 -->
+    <!-- 通常一个框架为了让开发者能够正确的配置，都会提供xml的规范文件（dtd\xsd） -->
+    <bean name="mine" class="com.kechen.myspring.Student" >
+        <constructor-arg name="stuNum" value="1"/>
+        <constructor-arg name="stuName" value="kechen"/>
+        <constructor-arg name="stuGender" value="男"/>
+        <constructor-arg name="stuAge">
+            <value>18</value>
+        </constructor-arg>
+
+        <constructor-arg name="enterenceTime">
+            <null/>
+        </constructor-arg>
+    </bean>
+    <bean name="studate" class="java.util.Date"></bean>
+</beans>
